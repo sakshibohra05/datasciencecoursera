@@ -2,9 +2,9 @@ This is the code book for tidy data set
 
 Variables Description Data read from project data files. For description of each data files, refer to README in the project folder.
 
-feature_list - features.txt file
+features - features.txt file
 
-activity - activity_labels.txt file
+activities - activity_labels.txt file
 
 subject_test - subject_test.txt file
 
