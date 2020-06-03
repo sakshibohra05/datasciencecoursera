@@ -40,4 +40,4 @@ tidy_avg <- tidy_mean_std %>%
   group_by(subject, activity) %>%
   summarise_each(funs(mean))
 #creating a file to sotre tidy data
-write.table(tidy_avg, "tidydata.txt", row.name=FALSE)
+write.table(tidy_avg, "tidydataset.txt", row.name=FALSE)
