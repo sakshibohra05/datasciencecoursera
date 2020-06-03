@@ -2,13 +2,13 @@
 
 library(dplyr)
 #extracting data into variables
-features <- read.table("features.txt", col.names = c("number","features"))
+feature <- read.table("features.txt", col.names = c("number","features"))
 activities <- read.table("activity_labels.txt", col.names = c("num", "activity"))
 
 
 #testing data 
 subject_test <- read.table("test/subject_test.txt", col.names = "subject")
-x_test <- read.table("test/X_test.txt", col.names = features$features)
+x_test <- read.table("test/X_test.txt", col.names = feature$features)
 y_test <- read.table("test/Y_test.txt", col.names = "num")
 y_test_label <- left_join(y_test, activities, by = "num")
 
@@ -18,7 +18,7 @@ tidy_test <- select(tidy_test, -label)
 
 #training data
 subject_train <- read.table("train/subject_train.txt", col.names = "subject")
-x_train <- read.table("train/X_train.txt", col.names = features$features)
+x_train <- read.table("train/X_train.txt", col.names = feature$features)
 y_train <- read.table("train/Y_train.txt", col.names = "num")
 y_train_label <- left_join(y_train, activities, by = "num")
 
